@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/github.io/waqqly-app/static/css/main.cf67431a.css",
+    "main.js": "/github.io/waqqly-app/static/js/main.b906d861.js",
+    "static/js/453.f77eedf7.chunk.js": "/github.io/waqqly-app/static/js/453.f77eedf7.chunk.js",
+    "static/media/bg.jpg": "/github.io/waqqly-app/static/media/bg.e850edbb50cd8899f0b0.jpg",
+    "index.html": "/github.io/waqqly-app/index.html",
+    "main.cf67431a.css.map": "/github.io/waqqly-app/static/css/main.cf67431a.css.map",
+    "main.b906d861.js.map": "/github.io/waqqly-app/static/js/main.b906d861.js.map",
+    "453.f77eedf7.chunk.js.map": "/github.io/waqqly-app/static/js/453.f77eedf7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf67431a.css",
+    "static/js/main.b906d861.js"
+  ]
+}
