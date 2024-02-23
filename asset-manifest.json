@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/waqqly-app/static/css/main.e6fdd88c.css",
-    "main.js": "/waqqly-app/static/js/main.bd9a13ea.js",
+    "main.css": "/waqqly-app/static/css/main.4f6b34ff.css",
+    "main.js": "/waqqly-app/static/js/main.4fe0e40d.js",
     "static/js/453.f77eedf7.chunk.js": "/waqqly-app/static/js/453.f77eedf7.chunk.js",
     "static/media/bg.jpg": "/waqqly-app/static/media/bg.e850edbb50cd8899f0b0.jpg",
     "index.html": "/waqqly-app/index.html",
-    "main.e6fdd88c.css.map": "/waqqly-app/static/css/main.e6fdd88c.css.map",
-    "main.bd9a13ea.js.map": "/waqqly-app/static/js/main.bd9a13ea.js.map",
+    "main.4f6b34ff.css.map": "/waqqly-app/static/css/main.4f6b34ff.css.map",
+    "main.4fe0e40d.js.map": "/waqqly-app/static/js/main.4fe0e40d.js.map",
     "453.f77eedf7.chunk.js.map": "/waqqly-app/static/js/453.f77eedf7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6fdd88c.css",
-    "static/js/main.bd9a13ea.js"
+    "static/css/main.4f6b34ff.css",
+    "static/js/main.4fe0e40d.js"
   ]
 }
