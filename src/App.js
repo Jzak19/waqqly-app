@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/pages/homePage.js'
+import OwnerRegister from './components/pages/ownerRegister.js'
+import WalkerRegister from './components/pages/walkerRegister.js';
+import SignIn from './components/pages/signIn.js'
+import { BrowserRouter as Router, Route, Routes, NavLink} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+   
+    <Router>
+
+        <Routes>
+          <Route path='/waqqly-app' exact element={<Home />} />
+          <Route path='/ownerRegister' exact element={<OwnerRegister />} />
+          <Route path='/walkerRegister' exact element={<WalkerRegister />} />
+          <Route path='/signIn' exact element = {<SignIn />} />
+        </Routes>
+     
+    </Router>
+  </>
   );
 }
 

@@ -1,0 +1,55 @@
+
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+.box-wrapper{
+    display:flex;
+    justify-content: center;
+    animation: fadeIn 2s ease-in;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.box{
+    width: 250px;
+    height: 400px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.box:hover{
+    width: 290px;
+    height: 440px;
+    animation: ease-in;
+    transition: 0.5s;
+}
+
+.boxTitle{
+    display:flex;
+    justify-content: center;
+    color: white;
+}
+
+.boxBody-wrapper{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    margin:auto;
+    text-align: center;
+}
+
+.boxBody{
+    display:flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 20px;
+    color: white;
+}

@@ -1,0 +1,12 @@
+.submitButton{
+    height: 30px;
+    width: 60px;
+    background-color: green;
+    color: white;
+
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+}

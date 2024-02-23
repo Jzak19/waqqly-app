@@ -1,0 +1,19 @@
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.signInButton{
+    background-color: blue;
+    color: white;
+    height: 30px;
+    
+    display: inline;
+    margin-left: 5px;
+}
+
+.buttontext{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
