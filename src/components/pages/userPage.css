@@ -1,0 +1,33 @@
+.profileInfo-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.profileInfo{
+    display: inline-flex;
+    background-color: lightgray;
+    margin-right: 5px;
+    width: 780px;
+    height: 200px;
+}
+
+.userImage{
+    background-color: grey;
+    height: 200px;
+    width: 200px;
+}
+
+.userName{
+    margin-left: 10px;
+}
+
+.info h2{
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
