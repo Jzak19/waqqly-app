@@ -39,6 +39,8 @@ const Home = () => {
 
                     <SignInButton text = "Sign In" destination="/signIn"/>
                 </div>
+
+                <SignInButton text = "ProfileTest" destination="/userProfile"/>
                 
             </div>
         </>
