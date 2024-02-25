@@ -13,6 +13,12 @@ import './ownerRegister.css';
 
 const ownerRegister = () => {
 
+    const userType = window.location.search;
+
+    const urlParams = new URLSearchParams(userType);
+    const type =  urlParams.get('type')
+    console.log(type)
+
     return(
         <>
             <div className="bgContainer">
@@ -26,7 +32,11 @@ const ownerRegister = () => {
                             
                                 <InputBox id="Name" text="First Name:"/>
                                 <InputBox id="SName" text="Surname:"/>
-                                <InputBox id="PName" text="Pet Name:"/>
+                                {type === 'owner' ? (
+                                    <InputBox id="Pname" text="Pet Name:"/>
+                                ) : (
+                                    <InputBox id="Llength" text="Walk length (minutes):"/>
+                                )}
                                 <InputBox id="Address" text="Address:"/>
                                 <InputBox id="Usr" text="Username:"/>
                                 <InputBox id="Pass" text="Password:"/>
@@ -38,8 +48,10 @@ const ownerRegister = () => {
                         </form>
                        
                     </div>
+                    <div className="signIn-wrapper">
+                        <p className="check">Already have an account? Sign in here: </p>
 
-                    <p className="check">Already have an account? Sign in here: </p>
+                    </div>
 
                     <SignInButton text = "Sign In" destination="/signIn"/>
                     

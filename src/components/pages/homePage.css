@@ -38,3 +38,8 @@
     opacity: 0;
     animation-fill-mode: forwards;
 }
+
+.signIn-wrapper {
+    display: flex;
+    justify-content: center;
+}

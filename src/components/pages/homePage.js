@@ -3,12 +3,21 @@ import ChoiceBox from '../choiceBox';
 import IMAGES from '../../assets/images.js';
 import TAndS from '../titleAndSubText.js'
 import SignInButton from '../signInButton.js';
+import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
+
 
 import React from 'react';
+
+
 
 import './homePage.css';
 
 const Home = () => {
+    
+
+
 
     return(
         <>
@@ -16,17 +25,19 @@ const Home = () => {
 
                 <TAndS title="Waqq.ly" subtext="A place where dog owners can find dog walkers!" animation="animation-wrapper"/>
 
+
+                
                 <div className="choiceBoxes">
             
                         <div>
-                            <Link to="/ownerRegister" className='linkBox' style={{textDecoration: "none"}}>
+                            <Link to="/registerPage/?type=owner" id='owner' className='linkBox' style={{textDecoration: "none"}}>
                                 <ChoiceBox color="blue" title="Dog Owner" bodyText="You are a person who owns a dog and is looking for a dog walker!"/>
                             </Link>               
                         </div>
            
            
                         <div>
-                            <Link to="/walkerRegister" className='linkBox' style={{textDecoration: "none"}}>
+                            <Link to="/registerPage/?type=walker" id='walker' className='linkBox' style={{textDecoration: "none"}}>
                                 <ChoiceBox color="green" title="Dog Walker" bodyText="You are a person who is looking for dog owners nearby!"/>
                             </Link>  
                         </div>
@@ -34,10 +45,11 @@ const Home = () => {
                     
                 </div>
                 <div className="check-wrapper">
+                    <div className="signIn-wrapper">
+                        <p className="check">Already have an account? Sign in here: </p>
+                    </div>
 
-                    <p className="check">Already have an account? Sign in here: </p>
-
-                    <SignInButton text = "Sign In" destination="/signIn"/>
+                    <SignInButton text = "Sign In" destination="/signIn/?type=unknown"/>
                 </div>
 
                 <SignInButton text = "ProfileTest" destination="/userProfile"/>

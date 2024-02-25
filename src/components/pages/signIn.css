@@ -1,3 +1,18 @@
-.button-wrapper{
+
+
+.signUp-wrapper{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.abc{
+    display: flex;
+    justify-content: center;
+}
+
+.choice-wrapper{
+    display: flex;
+    justify-content: center;
 }
