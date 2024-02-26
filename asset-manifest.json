@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/waqqly-app/static/css/main.6138924a.css",
-    "main.js": "/waqqly-app/static/js/main.fd59e670.js",
+    "main.js": "/waqqly-app/static/js/main.4667fd49.js",
     "static/js/453.e14e0dfd.chunk.js": "/waqqly-app/static/js/453.e14e0dfd.chunk.js",
     "static/media/bg.jpg": "/waqqly-app/static/media/bg.e850edbb50cd8899f0b0.jpg",
     "index.html": "/waqqly-app/index.html",
     "main.6138924a.css.map": "/waqqly-app/static/css/main.6138924a.css.map",
-    "main.fd59e670.js.map": "/waqqly-app/static/js/main.fd59e670.js.map",
+    "main.4667fd49.js.map": "/waqqly-app/static/js/main.4667fd49.js.map",
     "453.e14e0dfd.chunk.js.map": "/waqqly-app/static/js/453.e14e0dfd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6138924a.css",
-    "static/js/main.fd59e670.js"
+    "static/js/main.4667fd49.js"
   ]
 }
