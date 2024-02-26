@@ -1,0 +1,10 @@
+
+.leaflet-container{
+    height: 500px;
+    width: 900px;
+    justify-content:center ;
+}
+.map-wrapper{
+    display: flex;
+    justify-content: center;
+}
