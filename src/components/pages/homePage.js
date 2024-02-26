@@ -52,7 +52,7 @@ const Home = () => {
                     <SignInButton text = "Sign In" destination="/signIn/?type=unknown"/>
                 </div>
 
-                <SignInButton text = "ProfileTest" destination="/userProfile"/>
+                <SignInButton text = "Map test" destination="/mapPage"/>
                 
             </div>
         </>

@@ -63,7 +63,7 @@ function OwnerRegister() {
                             </div>
                         ) : (
                             <div className="form-wrapper">
-                                    <form action="POST" className="inputForm">
+                                    <form action="/mapPage" className="inputForm">
 
                     
                     
