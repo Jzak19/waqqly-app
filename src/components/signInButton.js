@@ -7,17 +7,17 @@ function signInButton({text, destination}) {
   return (
     <>
         
-            <div className="button-wrapper">
-                <Link to={destination} style={{textDecoration:"none"}}>
-                    <button className="signInButton">
-                        
-                            <div className="buttonText">
-                                {text}
-                            </div>
-                        
-                    </button>
-                </Link>
-            </div>
+        <div className="button-wrapper">
+            <Link to={destination} style={{textDecoration:"none"}}>
+                <button className="signInButton">
+                    
+                        <div className="buttonText">
+                            {text}
+                        </div>
+                    
+                </button>
+            </Link>
+        </div>
         
     </>
     )
