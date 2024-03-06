@@ -19,9 +19,8 @@ import ReactDOM from 'react-dom';
 import getIDsFromDB from '../../js/getIDsFromDB.js'
 import './mapPage.css';
 
-writeToDB(3, 'Matt', 'Coppard', 10, '156 greenhill road winchester', 'c', 'c', 'a', 0, 0)
-
 let addresses = (await getIDsFromDB())
+
 
 
 addresses = await Promise.all(addresses.map(async ID => {
