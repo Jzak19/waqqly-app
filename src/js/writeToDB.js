@@ -16,40 +16,40 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
 
-function writeToDB(ID, f_name, s_name, variable_data, addr, passwd, usrname, address, lon, lat, type){
+async function writeToDB(f_name, s_name, variable_data, addr, passwd, usrname, address, lon, lat, type){
     console.log(type)
 
-    {type === 'dog-owners' ? (
-      
-     push(ref(db, 'users/' + type + '/' ), {
-        ID: ID,
-        f_name: f_name,
-        s_name: s_name,
-        Pname: variable_data,
-        passwd: passwd,
-        usrname: usrname,
-        addr: addr,
-        lon: lon,
-        lat: lat 
-      })
+    try {
+      console.log(type);
 
-    ) : (
+      let refPath = '';
+      let data = {
+          f_name: f_name,
+          s_name: s_name,
+          passwd: passwd,
+          usrname: usrname,
+          addr: addr,
+          lon: lon,
+          lat: lat
+      };
 
-      push(ref(db, 'users/' + type + '/'), {
-        ID: ID,
-        f_name: f_name,
-        s_name: s_name,
-        w_length: variable_data,
-        passwd: passwd,
-        usrname: usrname,
-        addr: addr,
-        lon: lon,
-        lat: lat 
-    })
+      if (type === 'dog-owners') {
+          refPath = 'users/dog-owners/';
+          data.Pname = variable_data;
+      } else {
+          refPath = 'users/' + type + '/';
+          data.w_length = variable_data;
+      }
 
-    )}
+      const newDataRef = await push(ref(db, refPath), data);
+      const newKey = newDataRef.key;
 
-    
+      return newKey;
+  } catch (error) {
+      console.error("Error writing to database:", error);
+      throw error;
+  }
+
 }
 
 export default writeToDB

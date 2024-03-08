@@ -18,10 +18,10 @@ const db = getDatabase(app);
 
 
 
-async function readFromDB(ID, itemToGrab) {
+async function readFromDB(ID, itemToGrab, type) {
 
     const dbRef = ref(getDatabase())
-    const snapshot = await get(child(dbRef, `users/dog-walkers/${ID}${itemToGrab}`))
+    const snapshot = await get(child(dbRef, `users/` +type+ `/${ID}${itemToGrab}`))
 
     if (snapshot.exists()) {
         return snapshot.val();

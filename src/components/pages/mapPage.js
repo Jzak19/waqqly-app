@@ -19,17 +19,33 @@ import ReactDOM from 'react-dom';
 import getIDsFromDB from '../../js/getIDsFromDB.js'
 import './mapPage.css';
 
-let addresses = (await getIDsFromDB())
 
 
+const urlParams = new URLSearchParams(window.location.search);
+const type =  urlParams.get('type')
+const search = urlParams.get('param')
+const key = urlParams.get('key')
+console.log(search)
+console.log(type)
+console.log(key)
+
+
+let addresses = (await getIDsFromDB(search))
 
 addresses = await Promise.all(addresses.map(async ID => {
-    return readFromDB(ID, '/addr')
+  console.log(ID)
+    return readFromDB(ID, '/addr', search)
 }))
 
 const positions = await Promise.all(addresses.map(address => {
   return getLatLng(address)
 }))
+
+let currentUserAddr = await readFromDB(key, '/addr', type)
+console.log(currentUserAddr)
+
+
+let center = await getLatLng(currentUserAddr)
 
 
 function MapPage() {
@@ -48,14 +64,24 @@ function MapPage() {
       <div className="bgContainer">
         <TAndS title="Find other Wagglies!" subtext="Use the map to find other people who want to offer their services, or are in need of yours!" animated="none" />
         <div className='map-wrapper'>
-          <MapContainer center={positions[0]} zoom={13} scrollWheelZoom={false}>
+          <MapContainer center={center} zoom={13} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://api.maptiler.com/maps/basic-v2/256/tiles.json?key=q0qyxEAUBc5XsgAgv7Ar>OpenStreetMap</a> contributors'
               url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=q0qyxEAUBc5XsgAgv7Ar"
             />
+            <Marker position={center}>
+                    <Popup>
+
+                      A Dog Owner is near your location! <br /> tap to learn more.
+
+                    </Popup>
+            </Marker>
             {
               positions.map(position => {
                 return (
+
+                  
+
                   <Marker position={position}>
                     <Popup>
 
@@ -66,6 +92,8 @@ function MapPage() {
 
                 )
               })
+
+              
             }
           </MapContainer>,
         </div>

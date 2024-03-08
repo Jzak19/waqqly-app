@@ -18,11 +18,12 @@ const db = getDatabase(app);
 
 
 
-async function readFromDB() {
+async function readFromDB(type) {
   const dbRef = ref(getDatabase())
-  const snapshot = await get(child(dbRef, 'users/dog-walkers'))
+  const snapshot = await get(child(dbRef, 'users/' + type))
 
   if (snapshot.exists()) {
+    console.log(Object.keys(snapshot.toJSON()))
     return Object.keys(snapshot.toJSON())
 
   } else {

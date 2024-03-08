@@ -48,19 +48,18 @@ const OwnerRegister = () => {
     }
 
     const handleSubmit = (event) => {
+        let key = ''
         event.preventDefault();
         const combinedAddr = (formData.HouseNumber + ", " + formData.StreetName + ", " + formData.CityName + ", " + formData.Postcode)
-        console.log(formData.CityName)
-        console.log(combinedAddr)
         // Output form data to console
-        {type === 'owner' ? (
-            writeToDB(generateUniqueID(), formData.Name, formData.Sname, formData.Pname, combinedAddr, formData.Passwd, formData.Usrname, combinedAddr, 0, 0, 'dog-owners')
+        {type === 'dog-owners' ? (
+            writeToDB(formData.Name, formData.Sname, formData.Pname, combinedAddr, formData.Passwd, formData.Usrname, combinedAddr, 0, 0, 'dog-owners').then(generatedKey => {const url ='/mapPage/?param=dog-walkers&type=dog-owners&key=' + generatedKey; navigate(url)})
             
             
         ) : (
-            writeToDB(generateUniqueID(), formData.Name, formData.Sname, formData.Llength, combinedAddr, formData.Passwd, formData.Usrname, combinedAddr, 0, 0, 'dog-walkers')
+            writeToDB(formData.Name, formData.Sname, formData.Llength, combinedAddr, formData.Passwd, formData.Usrname, combinedAddr, 0, 0, 'dog-walkers').then(generatedKey => {const url ='/mapPage/?param=dog-walkers&type=dog-owners&key=' + generatedKey; navigate(url)})
         )}
-        navigate('/mapPage?type=' + type)
+        
       };
 
     
@@ -84,7 +83,7 @@ const OwnerRegister = () => {
                             
                                 <InputBox id="Name" text="First Name:" formDataValue={formData.Name} onChange={handleInputChange}/>
                                 <InputBox id="Sname" text="Surname:" formDataValue={formData.Sname} onChange={handleInputChange}/>
-                                {type === 'owner' ? (
+                                {type === 'dog-owners' ? (
                                     <InputBox id="Pname" text="Pet Name:" formDataValue={formData.Pname} onChange={handleInputChange}/>
                                 ) : (
                                     <InputBox id="Llength" text="Walk length (minutes):" formDataValue={formData.Llength} onChange={handleInputChange}/>

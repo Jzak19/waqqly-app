@@ -30,14 +30,14 @@ const Home = () => {
                 <div className="choiceBoxes">
             
                         <div>
-                            <Link to="/registerPage/?type=owner" id='owner' className='linkBox' style={{textDecoration: "none"}}>
+                            <Link to="/registerPage/?type=dog-owners" id='owner' className='linkBox' style={{textDecoration: "none"}}>
                                 <ChoiceBox color="blue" title="Dog Owner" bodyText="You are a person who owns a dog and is looking for a dog walker!"/>
                             </Link>               
                         </div>
            
            
                         <div>
-                            <Link to="/registerPage/?type=walker" id='walker' className='linkBox' style={{textDecoration: "none"}}>
+                            <Link to="/registerPage/?type=dog-walkers" id='walker' className='linkBox' style={{textDecoration: "none"}}>
                                 <ChoiceBox color="green" title="Dog Walker" bodyText="You are a person who is looking for dog owners nearby!"/>
                             </Link>  
                         </div>
