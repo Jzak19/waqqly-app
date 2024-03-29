@@ -1,10 +1,6 @@
-.bgContainer{
-    background-image: url("../../assets/bg.jpg");
-    background-size: cover;
-    background-position: center;
+.bgContainer1{
     height: 100vh;
 }
-
 
 .homeTitle-wrapper{
     display:flex;
@@ -38,4 +34,19 @@
 
 .check{
     margin: 20px
+}
+
+
+
+.registerButton1{
+    background-color: green;
+    color: white;
+    height: 60px;
+    border-radius: 20px;
+    width: 300px;
+    display: inline;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: large;
+
 }

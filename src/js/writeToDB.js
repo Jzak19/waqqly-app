@@ -6,7 +6,9 @@ import { getDatabase, ref, set, push } from "firebase/database";
 const firebaseConfig = {
   // ...
   // The value of `databaseURL` depends on the location of the database
-  databaseURL: "https://waqqly-app-default-rtdb.europe-west1.firebasedatabase.app/",
+  apiKey: 'AIzaSyAXcxbhAdl5YDuR-olC1-mBVlND064Zm5s',
+        databaseURL: "https://waqqly-app-default-rtdb.europe-west1.firebasedatabase.app/",
+
 };
 
 // Initialize Firebase
@@ -16,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
 
-async function writeToDB(f_name, s_name, variable_data, addr, passwd, usrname, address, lon, lat, type){
+async function writeToDB(ID, email, f_name, s_name, variable_data, addr, passwd, usrname, address, lon, lat, type){
     console.log(type)
 
     try {
@@ -30,21 +32,23 @@ async function writeToDB(f_name, s_name, variable_data, addr, passwd, usrname, a
           usrname: usrname,
           addr: addr,
           lon: lon,
-          lat: lat
+          lat: lat,
+          email: email
       };
 
       if (type === 'dog-owners') {
-          refPath = 'users/dog-owners/';
+          refPath = 'users/dog-owners/' + ID;
           data.Pname = variable_data;
       } else {
-          refPath = 'users/' + type + '/';
+          refPath = 'users/' + type + '/' + ID;
           data.w_length = variable_data;
+          data.jobs = {job: 'job'}
       }
 
-      const newDataRef = await push(ref(db, refPath), data);
-      const newKey = newDataRef.key;
+      const newDataRef = await set(ref(db, refPath), data);
 
-      return newKey;
+
+
   } catch (error) {
       console.error("Error writing to database:", error);
       throw error;

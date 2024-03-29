@@ -1,12 +1,12 @@
 
-.bgContainer{
-    background-image: url("../../assets/bg.jpg");
-    background-size: cover;
+.bgContainer1{
+    background-color: black;
     background-position: center;
-    height: 100vh;
+    height: 100%
  
 
 }
+
 
 
 
@@ -43,3 +43,4 @@
     display: flex;
     justify-content: center;
 }
+

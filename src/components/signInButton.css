@@ -1,15 +1,21 @@
-.button-wrapper{
+.signInbutton-wrapper{
+
     display: flex;
     justify-content: center;
+    padding-bottom: 100px;
+    
 }
 
 .signInButton{
     background-color: blue;
     color: white;
-    height: 30px;
-    
+    height: 60px;
+    border-radius: 20px;
+    width: 300px;
     display: inline;
     margin-left: 5px;
+    cursor: pointer;
+    font-size: large;
 }
 
 .buttontext{

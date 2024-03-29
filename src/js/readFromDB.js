@@ -6,7 +6,9 @@ import { getDatabase, ref, child, get } from "firebase/database";
 const firebaseConfig = {
     // ...
     // The value of `databaseURL` depends on the location of the database
-    databaseURL: "https://waqqly-app-default-rtdb.europe-west1.firebasedatabase.app/",
+    apiKey: 'AIzaSyAXcxbhAdl5YDuR-olC1-mBVlND064Zm5s',
+        databaseURL: "https://waqqly-app-default-rtdb.europe-west1.firebasedatabase.app/",
+
 };
 
 // Initialize Firebase
@@ -19,7 +21,7 @@ const db = getDatabase(app);
 
 
 async function readFromDB(ID, itemToGrab, type) {
-
+    
     const dbRef = ref(getDatabase())
     const snapshot = await get(child(dbRef, `users/` +type+ `/${ID}${itemToGrab}`))
 
@@ -27,7 +29,8 @@ async function readFromDB(ID, itemToGrab, type) {
         return snapshot.val();
     } else {
         console.log("No data available");
-    }
+        return 'nodata'
+    }  
 }
 
 export default readFromDB
