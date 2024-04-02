@@ -1,0 +1,51 @@
+.jobDiv{
+    width: 90%;
+    height: 200px;
+    background-color:black;
+    border-color: white;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.ownerInfo {
+    margin-left: 20px;
+
+    width: 50%
+
+}
+
+.button-wrapper{
+
+    width: 50%;
+    align-items: end;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.acceptJobButton{
+    width: 100px;
+    height: 30px;
+    background-color: green;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+.declineJobButton{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+}

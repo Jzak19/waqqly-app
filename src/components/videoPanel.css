@@ -1,0 +1,50 @@
+.panelContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 70vh;
+  background-image: url("./../assets/output-onlinegiftools.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.BannerTitle{
+    color: white;
+    margin: 0%;
+    font-size: 8vh;
+    justify-content: center;
+    display: flex;
+    padding-top: 30px;
+    text-align: center;
+    margin: 0px;
+}
+
+.subtext{
+    color: white;
+    margin: 0%;
+    font-size: 4vh;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding-top: 10%;
+    width: 100%;
+    margin: 0px;
+}
+
+@media (max-width: 1024px) {
+  .BannerTitle{
+    font-size: 4vh;
+    justify-content: center;
+  }
+
+  .subtext{
+    font-size: 3vh;
+    align-items: center;
+
+  }
+}
+
+

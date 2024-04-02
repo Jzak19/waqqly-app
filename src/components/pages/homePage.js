@@ -126,10 +126,12 @@ const Home = ({begginerKey}) => {
                 <VideoPanel/>
             </div>
             
-            <AlignedBox image={IMAGES.dogs} alignment={'left'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
-            <AlignedBox image={IMAGES.single} alignment={'right'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
-            <AlignedBox image={IMAGES.nice} alignment={'left'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
-            <AlignedBox image={IMAGES.dogs} alignment={'right'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
+            <div className="alignedBoxWrapper">
+                <AlignedBox image={IMAGES.dogs} alignment={'left'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
+                <AlignedBox image={IMAGES.single} alignment={'right'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
+                <AlignedBox image={IMAGES.nice} alignment={'left'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
+                <AlignedBox image={IMAGES.dogs} alignment={'right'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
+            </div>
 
             </body>
         </>
