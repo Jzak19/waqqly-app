@@ -17,7 +17,7 @@ function App() {
     <Router>
 
         <Routes>
-          <Route path='/waqqly-app' exact element={<HomePage />} />
+          <Route path='/' exact element={<HomePage />} />
           <Route path='/registerPage' exact element={<Register />} />
           <Route path='/signIn' exact element = {<SignIn />} />
           <Route path='/userProfile' exact element={<UserPage/>}/>
