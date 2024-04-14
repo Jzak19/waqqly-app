@@ -77,7 +77,7 @@ function Navbar () {
 
           {isLoggedIn ? (
             <>
-                <div className="a" onClick={signOutFunc}><Link to='/waqqly-app'><a href="#">Sign Out</a></Link></div>
+                <div className="a" onClick={signOutFunc}><Link to='/'><a href="#">Sign Out</a></Link></div>
                 <div className="a"><Link to={`/userProfile?key=${key}&type=${type}`}><a href="#">Profile</a></Link></div>
             </>
 
@@ -101,7 +101,7 @@ function Navbar () {
       <div className="sideMenu" style={{left: isMenuOpen ? '0' : '100%'}}>
         {isLoggedIn ? (
               <>
-                  <div className="a" onClick={signOutFunc}><Link to='/waqqly-app'><a href="#">Sign Out</a></Link></div>
+                  <div className="a" onClick={signOutFunc}><Link to='/'><a href="#">Sign Out</a></Link></div>
                   <div className="a"><Link to={`/userProfile?key=${key}&type=${type}`}><a href="#">Profile</a></Link></div>
               </>
 
