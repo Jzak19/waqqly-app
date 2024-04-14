@@ -95,14 +95,14 @@ function OwnerRegister() {
                 <LogoLink/>
 
                     
-                <TAndS title="Sign In" subtext="Choose an account type and sign in!" animation="animation-wrapper"/>
+                <TAndS title="Sign In" subtext="Choose an account type and sign in!" animation=""/>
 
                     
 
                     {type === 'unknown' ? (
                         
                
-                            <div className="choice-wrapper">
+                            <div className="choice-wrapper1">
                             
                                 <div onClick={handleClick}>
                                     <Link to="/signIn/?type=dog-owners" id='owner' className='linkBox' style={{textDecoration: "none"}}>
@@ -126,7 +126,7 @@ function OwnerRegister() {
                                     <InputBox id="Email" text="Email:" formDataValue={formData.Email} onChange={handleInputChange}/>
                                     <InputBox id="Passwd" text="Password:" formDataValue={formData.Passwd} onChange={handleInputChange}/>
 
-                                    <button type='submit'>Sign In</button>
+                                    <button type='submit' className='ButtonsignIn'>Sign In</button>
 
                     
                     

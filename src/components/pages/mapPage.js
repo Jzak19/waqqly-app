@@ -59,11 +59,31 @@ let filteredAddresses = addresses.filter(element => element !== undefined);
 console.log(filteredAddresses)
 
 
+
+
 const positions = await Promise.all(filteredAddresses.map(async address => {
-  let x = await getLatLng(address.addr)
+  console.log("Now trying to fetch coordinates for " + address.addr)
+  const addressData = {
+    address: address.addr // Replace this with the address you want to send
+  };
+  let x = await fetch('https://finalapp-b4y7k2hunq-uc.a.run.app/coordinates', {
+    method: 'POST',
+    headers: {  
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(addressData)
+  }).then(response => response.json())
+  .then(data => {
+    console.log(data); // Log the response data
+    return data
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  })
+  console.log("POSITION: " + x)
+  x = Object.values(x)
   x.unshift(address.id)
-  console.log(x)
-  return(x)
+  return x
 }))
 
 console.log(positions)
@@ -71,13 +91,37 @@ console.log(positions)
 let currentUserAddr = await readFromDB(key, '/addr', type)
 console.log(currentUserAddr)
 
-if (currentUserAddr === undefined) {
+
+
+if (currentUserAddr === 'nodata') {
   const newType = 'dog-walkers' 
   currentUserAddr = await readFromDB(key, '/addr', newType)
 }
 
-let center = await getLatLng(currentUserAddr)
+const addressData = {
+  address: currentUserAddr // Replace this with the address you want to send
+};
 
+
+
+let center = await fetch('https://finalapp-b4y7k2hunq-uc.a.run.app/coordinates', {
+  method: 'POST',
+  headers: {  
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(addressData)
+}).then(response => response.json())
+.then(data => {
+  console.log(data); 
+  return data
+})
+.catch(error => {
+  console.error('Error:', error);
+})
+
+
+center = Object.values(center)
+console.log("CENTER " + center)
 
 async function check () {
 
@@ -192,7 +236,7 @@ const handleSubmit = (event) => {
             </Marker>
             {
               positions.map(position => {
-
+                console.log(position)
                 function handleJob () {
                   uploadJob(position[0], key, realType)
                 }
@@ -200,7 +244,7 @@ const handleSubmit = (event) => {
                 return (
 
                   
-
+                  
                   <Marker position={[position[1], position[2]]}>
                     { position[0] === key ? (
                       <Popup>

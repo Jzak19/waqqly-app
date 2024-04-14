@@ -1,24 +1,28 @@
 
 
 async function getLatLng(address) {
-
+    console.log("RECIEVED ADDRESS " + address)
     const apiKey = 'AIzaSyAj76ZZ1LFaj3k5my3MMKSd2lmd9zaYKOs'; // Replace 'YOUR_API_KEY' with your actual API key
 
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`;
-
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        console.log("LOADED ADDRESS " + address)
+        const response = await fetch('http://localhost:5000/coordinates', {
+            method: 'POST',
+            headers: {  
+              'Content-Type': 'no-cors'
+            },
+            body: address
+          }).then(response => response.json())
+          .then(data => {
+            console.log("DATA fetched from API" + data); 
+            return data
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
 
-        if (data.status === "OK" && data.results.length > 0) {
-            const { lat, lng } = data.results[0].geometry.location;
-                
-
-            return [lat, lng]
-        } else {
-            console.log("Unable to geocode address.");
-            return null;
-        }
+          console.log("RESPONSE: " + response)
+          return response
     } catch (error) {
         console.log("Error fetching data:", error);
         return null;

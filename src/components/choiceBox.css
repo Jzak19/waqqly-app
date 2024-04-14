@@ -12,9 +12,7 @@
 .box-wrapper{
     display:flex;
     justify-content: center;
-    animation: fadeIn 2s ease-in;
-    animation-delay: 2s;
-    opacity: 0;
+   
     animation-fill-mode: forwards;
 }
 

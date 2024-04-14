@@ -31,3 +31,19 @@
     flex-direction: column;
 }
 
+.button-wrapper5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    background-color: green;
+    color: white;
+    height: 60px;
+    border-radius: 20px;
+    width: 300px;
+    display: inline;
+    cursor: pointer;
+    font-size: large;
+}

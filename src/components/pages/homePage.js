@@ -27,7 +27,6 @@ const firebaseConfig = {
 }
 
 
-
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
@@ -63,7 +62,7 @@ const Home = ({begginerKey}) => {
 
             
 
-                <TAndS title="Waqq.ly" subtext="A place where dog owners can find dog walkers!" animation="animation-wrapper"/>
+                <TAndS title="Waqq.ly" subtext="A place where dog owners can find dog walkers!" animation='none'/>
 
 
                 {!userLoggedIn ? (
@@ -119,7 +118,7 @@ const Home = ({begginerKey}) => {
                     
                 </div>
 
-                <SignInButton text = "Sign In" destination="/signIn/?type=unknown"/>
+                <SignInButton text = "Sign In" destination="/signIn/?type=unknown" style={{backgroundColor: 'green'}}/>
                 
             </div>
             <div className="vid-wrapper">
@@ -128,9 +127,9 @@ const Home = ({begginerKey}) => {
             
             <div className="alignedBoxWrapper">
                 <AlignedBox image={IMAGES.dogs} alignment={'left'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
-                <AlignedBox image={IMAGES.single} alignment={'right'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
-                <AlignedBox image={IMAGES.nice} alignment={'left'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
-                <AlignedBox image={IMAGES.dogs} alignment={'right'} title={"How our Service works..."} subtext={"When a new user reaches our webpage, the first step is to register! Firstly, pick which type of service you are interested in, and then complete the registration process. You will be met with a customised page to suit your needs."}/>
+                <AlignedBox image={IMAGES.single} alignment={'right'} title={"High quality of service..."} subtext={"Our owners and walkers have all reported a very high quaslity of service from us, they found it easy to register and find wagglies nearby!"}/>
+                <AlignedBox image={IMAGES.nice} alignment={'left'} title={"Highly customiseable profiles..."} subtext={"Once you've signed in, head over to your personal profile page to make any changes necessary! These will be instantly applied to our database!"}/>
+                <AlignedBox image={IMAGES.dogs} alignment={'right'} title={"Any Issues? give us a shout..."} subtext={"Our 24/7 issue response team is ready to handle your requests, qeries and issues. Feel free to have a chat if you are unsure about something!"}/>
             </div>
 
             </body>

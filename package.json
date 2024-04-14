@@ -1,7 +1,6 @@
 {
   "name": "waqqly-app",
-  "homepage": "https://jzak19.github.io/waqqly-app/",
-  "proxy": "http://localhost:8888/api",
+  "homepage": "/waqqly-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

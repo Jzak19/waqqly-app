@@ -39,7 +39,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content:center ;
-
+    width: 100vw;
 }
 
 .moreAlign{
@@ -61,7 +61,7 @@
 
 .right .boxTitleAligned{
     text-align: center;
-    color: blue;
+    color: white;
     text-align: center;
     padding-right: 20px;
     text-align: center;
@@ -76,7 +76,7 @@
 }
 
 .right .boxSubtextAligned{
-    color: blue;
+    color: white;
     text-align: center;
     justify-content: center;
     width: 70%;

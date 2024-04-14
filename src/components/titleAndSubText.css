@@ -23,6 +23,10 @@
     
 }
 
+.none{
+    animation:none;
+}
+
 
 
 .animation-wrapper:nth-child(2){

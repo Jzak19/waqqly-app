@@ -6,6 +6,7 @@ import { useState } from 'react';
 import readFromDB from '../../js/readFromDB'
 import { getDatabase, ref, child, get, set, update } from "firebase/database";
 import { initializeApp } from "firebase/app";
+import Navbar from '../navbar';
 
 import React from 'react';
 
@@ -85,6 +86,7 @@ const UserPage = () => {
     return(
         
         <>
+            <Navbar/>
             <div className="bgContainer1">
                 <div className="profileInfo-wrapper">
                     
@@ -119,12 +121,16 @@ const UserPage = () => {
                                     console.log('no job account yet')
                                 )}
                                 {walkerPetName !== 'nodata' ? (
-                                    <InputBox id="Pname" text="Walk length (minutes):" formDataValue={formData.Pname} onChange={handleInputChange} initialValue={walkerPetName}/>
+                                    <InputBox id="Pname" text="Pet Name" formDataValue={formData.Pname} onChange={handleInputChange} initialValue={walkerPetName}/>
                                 ) : (
                                     console.log('no job account yet')
                                 )}
-                                <button type='submit'>Update Info</button>
+                                <div className="button-wrapper5">
+                                    <button type='submit'>Update Info</button>
+                                </div>
+                                
                     </form>
+                    
                 </div>
                 
                 
