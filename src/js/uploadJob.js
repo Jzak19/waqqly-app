@@ -1,6 +1,8 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, push } from "firebase/database";
 import readFromDB from "./readFromDB";
+import { initializeApp } from "firebase/app";
+import { getAuth, signInWithEmailAndPassword} from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -18,6 +20,10 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app);
+const auth = getAuth(app);
+
+const userLoggedIn = auth.currentUser
+
 
 async function uploadJob(ID, ownerID, trueType){
 
@@ -27,7 +33,7 @@ async function uploadJob(ID, ownerID, trueType){
             jobStatus: 'unaccepted',
             ownerName: await readFromDB(ownerID, '/usrname', trueType),
   
-            Email: await readFromDB(ownerID, '/Email', trueType),
+            Email: userLoggedIn.email,
         }
 
         if (trueType === 'dog-owners') {
