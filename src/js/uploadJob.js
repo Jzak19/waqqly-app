@@ -20,14 +20,15 @@ const app = initializeApp(firebaseConfig)
 const db = getDatabase(app);
 const auth = getAuth(app);
 
-const userLoggedIn = auth.currentUser
 
-console.log("User Data: " + userLoggedIn.uid + " " + userLoggedIn.email)
 
 
 async function uploadJob(ID, ownerID, trueType){
 
     try {
+        const userLoggedIn = auth.currentUser
+
+        console.log("User Data: " + userLoggedIn.uid + " " + userLoggedIn.email)
 
         const data = {
             jobStatus: 'unaccepted',
