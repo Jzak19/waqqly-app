@@ -49,6 +49,7 @@ async function uploadJob(ID, ownerID, trueType){
 
   } catch (error) {
       console.error("Error writing to database:", error);
+      console.log("ERROR UPLOADING JOB" + error)
       throw error;
   }
 
