@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set, push } from "firebase/database";
 import readFromDB from "./readFromDB";
-import { initializeApp } from "firebase/app";
 import { getAuth, signInWithEmailAndPassword} from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration
