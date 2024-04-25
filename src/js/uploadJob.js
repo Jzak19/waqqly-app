@@ -22,6 +22,8 @@ const auth = getAuth(app);
 
 const userLoggedIn = auth.currentUser
 
+console.log("User Data: " + userLoggedIn.uid + " " + userLoggedIn.email)
+
 
 async function uploadJob(ID, ownerID, trueType){
 
