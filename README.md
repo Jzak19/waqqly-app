@@ -1,3 +1,30 @@
+
+Welcome to my waqqly website project
+
+In order to view the hosted website, follow this link: https://main.d2wd62izskxa7g.amplifyapp.com/ 
+
+The website uses Google Maps API, Firebase Realtime Datastore, and AWS Amplify Hosting as well as a microservice hosted with Docker and Google Cloud Run. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
